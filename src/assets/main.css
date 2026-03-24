@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Noto+Serif+Thai:wght@400;600&display=swap');
+
+:root {
+  --brown-900: #2C1A0E;
+  --brown-800: #3D2410;
+  --brown-700: #5C3317;
+  --brown-600: #7A4520;
+  --brown-500: #9A5B2D;
+  --brown-400: #B87340;
+  --brown-100: #F5EAD8;
+  --brown-50:  #FDF6EE;
+  --green-dark:    #2D5A1B;
+  --green-mid:     #4A7C2F;
+  --green-light:   #7BB84A;
+  --green-bg:      #E8F2DE;
+  --cream:         #FBF6EE;
+  --bg-page:       #F5EFE5;
+  --sidebar-w:     220px;
+  --header-h:      56px;
+  --tag-blue:      #3B72C2;
+  --tag-blue-bg:   #E6EEF9;
+  --tag-green:     #3A7820;
+  --tag-green-bg:  #E3F2D8;
+  --tag-orange:    #A84E10;
+  --tag-orange-bg: #FDE9D4;
+  --tag-purple:    #5E3AAA;
+  --tag-purple-bg: #EBE5F8;
+}
+
+/* ─── Reset ──────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Sarabun', sans-serif;
+  background: var(--bg-page);
+  color: var(--brown-900);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: 'Sarabun', sans-serif; }
+input, textarea, select { font-family: 'Sarabun', sans-serif; }
+img { max-width: 100%; display: block; }
+
+::-webkit-scrollbar       { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #C8B89A; border-radius: 4px; }
+
+.font-serif { font-family: 'Noto Serif Thai', serif; }
+
+/* ─── Tablet: sidebar แคบลง ──────────────────────── */
+@media (max-width: 1024px) {
+  :root { --sidebar-w: 60px; }
+}
+
+/* ─── Mobile: sidebar ซ่อน ───────────────────────── */
+@media (max-width: 640px) {
+  :root { --sidebar-w: 0px; --header-h: 50px; }
+}
